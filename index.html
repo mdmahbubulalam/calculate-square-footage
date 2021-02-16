@@ -8,26 +8,7 @@
     <title>Calculate Square Fit</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <style>
-        body {
-            background-color: gray;
-        }
-
-        #show {
-            display: none;
-        }
-
-        .inputFieldBackground {
-            background-color: #F0F0F0;
-            border-radius: 10px;
-        }
-
-        .resultBackground {
-            background-color: #FFFFFF;
-            border-radius: 10px;
-            line-height: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -91,34 +72,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
     </script>
-    <script>
-        const lengthSideOne = document.getElementById('lengthSideOne');
-        const lengthSideTwo = document.getElementById('lengthSideTwo');
-        const widthSideTwo = document.getElementById('widthSideOne');
-        const widthSideOne = document.getElementById('widthSideTwo');
-        const result = document.getElementById('result');
-
-        document.getElementById('resultBtn').addEventListener('click', () => {
-            const lengthSideOneNumber = parseFloat(lengthSideOne.value);
-            const lengthSideTwoNumber = parseFloat(lengthSideTwo.value);
-            const widthSideOneNumber = parseFloat(widthSideOne.value);
-            const widthSideTwoNumber = parseFloat(widthSideTwo.value);
-
-            document.getElementById('show').style.display = 'block';
-
-            const lengthResult = (lengthSideOneNumber + lengthSideTwoNumber) / 2;
-            const widthResult = (widthSideOneNumber + widthSideTwoNumber) / 2;
-            const squareFootage = lengthResult * widthResult;
-
-            const squareFootageShow = `
-                <h5>Answer:</h5>
-                <p><b>Length=</b>${' '+lengthResult+' '}ft</p>
-                <p><b>Width=</b>${' '+widthResult+' '}ft</p>
-                <p><b>Square Footage=</b>${' '+squareFootage+' '}ft<sup>2</sup></p>
-            `
-            result.innerHTML = squareFootageShow;
-        })
-    </script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
